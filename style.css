@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap');
+
+
+* {
+    margin: 0% !important;
+    padding: 0% !important;
+    box-sizing: border-box !important;
+}
+
+:root {
+    --primary-color: #F5F6F7;
+    --nav-link-color: #999Db3;
+    --secondary-color: #080A0D;
+    --third-color: #585C70;
+    --fourth-color: #383C46;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto Flex', sans-serif !important;
+    overflow-x: hidden !important;
+    background-color: var(--primary-color) !important;
+    padding: 0 !important;
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10rem !important;
+    z-index: 99;
+    background-color: var(--primary-color);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-brand .nav-logo {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: var(--secondary-color) !important;
+    border-radius: 50%;
+    position: relative;
+    border: 1px solid var(--secondary-color) !important;
+}
+
+.nav-logo::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--secondary-color) !important;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.brand-title {
+    color: var(--fourth-color);
+    font-weight: 500;
+    font-style: normal !important;
+    font-size: 18px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links {
+    color: var(--nav-link-color) !important;
+    font-size: 15px !important;
+    font-style: normal !important;
+    letter-spacing: -0.03px;
+    font-weight: 500;
+}
+
+.nav-links.active {
+    color: var(--fourth-color) !important;
+}
+
+.fa-bars {
+    font-size: 20px;
+    border: 1px solid var(--nav-link-color);
+    padding: 10px !important;
+    color: var(--nav-link-color)
+}
+
+.fa-bars:hover {
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    margin-top: 50px !important;
+    padding: 0 10rem !important;
+}
+
+
+.hero h1 {
+    font-size: 6rem;
+    font-weight: 500;
+    color: var(--fourth-color) !important;
+}
+
+h1 {
+    max-width: 1000px;
+}
+
+.lead {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 100px !important;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-start {
+    background-color: var(--fourth-color);
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 15px 25px !important;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.btn-quote {
+    background-color: var(--nav-link-color);
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 15px 25px !important;
+    font-weight: 500;
+}
+
+.key-role {
+    display: flex;
+    gap: 25px;
+    font-size: 15px;
+    align-items: center;
+    color: var(--fourth-color);
+    font-weight: 500;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .header {
+        padding: 10px 2rem !important;
+        z-index: -99;
+    }
+
+    .container {
+        padding: 0 2rem !important;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+        font-weight: 500;
+        line-height: 70px !important;
+    }
+
+    .lead {
+        flex-direction: column;
+        gap: 70px;
+        margin-top: 60px !important;
+        align-items: center;
+    }
+
+    .hero-btn {
+        justify-content: space-between;
+    }
+
+    .btn-start, .btn-quote {
+        padding: 20px 40px !important;
+        border-radius: 50px;
+    }
+
+    .key-role {
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        position: absolute;
+        flex-direction: column;
+        top: -100%;
+        background-color: var(--primary-color);
+        width: 100%;
+        z-index: 1;
+        padding: 60px !important;
+    }
+
+
+    .active-nav {
+        top: 8%;
+        position: absolute;
+        z-index: 1;
+    }
+
+}
+
+
+
+
+
